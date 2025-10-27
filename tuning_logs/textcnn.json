@@ -1,0 +1,84 @@
+{
+  "search_space": {
+    "embedding_dim": [128, 200],
+    "num_filters": [64, 128],
+    "dropout": [0.3],
+    "learning_rate": [0.001, 0.0005],
+    "epochs": 2,
+    "batch_size": 32,
+    "max_tokens": 150
+  },
+  "results": [
+    {
+      "params": {"embedding_dim": 200, "num_filters": 128, "dropout": 0.3, "learning_rate": 0.001},
+      "val_accuracy": 0.8255,
+      "test_accuracy": 0.8385,
+      "test_precision": 0.8901,
+      "test_recall": 0.7965,
+      "test_f1": 0.8401
+    },
+    {
+      "params": {"embedding_dim": 200, "num_filters": 128, "dropout": 0.3, "learning_rate": 0.0005},
+      "val_accuracy": 0.7786,
+      "test_accuracy": 0.8073,
+      "test_precision": 0.8282,
+      "test_recall": 0.8120,
+      "test_f1": 0.8195
+    },
+    {
+      "params": {"embedding_dim": 128, "num_filters": 128, "dropout": 0.3, "learning_rate": 0.0005},
+      "val_accuracy": 0.7656,
+      "test_accuracy": 0.8047,
+      "test_precision": 0.8879,
+      "test_recall": 0.7387,
+      "test_f1": 0.8059
+    },
+    {
+      "params": {"embedding_dim": 200, "num_filters": 64, "dropout": 0.3, "learning_rate": 0.0005},
+      "val_accuracy": 0.7552,
+      "test_accuracy": 0.7708,
+      "test_precision": 0.7637,
+      "test_recall": 0.8611,
+      "test_f1": 0.8060
+    },
+    {
+      "params": {"embedding_dim": 128, "num_filters": 64, "dropout": 0.3, "learning_rate": 0.001},
+      "val_accuracy": 0.7266,
+      "test_accuracy": 0.7630,
+      "test_precision": 0.7451,
+      "test_recall": 0.8719,
+      "test_f1": 0.8013
+    },
+    {
+      "params": {"embedding_dim": 128, "num_filters": 64, "dropout": 0.3, "learning_rate": 0.0005},
+      "val_accuracy": 0.6953,
+      "test_accuracy": 0.6875,
+      "test_precision": 0.6807,
+      "test_recall": 0.8262,
+      "test_f1": 0.7429
+    },
+    {
+      "params": {"embedding_dim": 200, "num_filters": 64, "dropout": 0.3, "learning_rate": 0.001},
+      "val_accuracy": 0.5885,
+      "test_accuracy": 0.7109,
+      "test_precision": 0.6537,
+      "test_recall": 1.0000,
+      "test_f1": 0.7898
+    },
+    {
+      "params": {"embedding_dim": 128, "num_filters": 128, "dropout": 0.3, "learning_rate": 0.001},
+      "val_accuracy": 0.5130,
+      "test_accuracy": 0.6302,
+      "test_precision": 0.5964,
+      "test_recall": 1.0000,
+      "test_f1": 0.7468
+    }
+  ],
+  "best": {
+    "selection_metric": "val_accuracy",
+    "params": {"embedding_dim": 200, "num_filters": 128, "dropout": 0.3, "learning_rate": 0.001},
+    "val_accuracy": 0.8255,
+    "test_accuracy": 0.8385,
+    "notes": "Highest validation accuracy with balanced precision/recall; used as default TextCNN configuration."
+  }
+}

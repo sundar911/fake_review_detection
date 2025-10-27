@@ -1,0 +1,54 @@
+{
+  "search_space": {
+    "learning_rate": [0.002, 0.001, 0.0005],
+    "embedding_dim": [200, 320],
+    "hidden_dim": [64, 96],
+    "dropout": [0.2, 0.4],
+    "word_heads": [4],
+    "sentence_heads": [4, 6],
+    "attention_dropout": [0.1, 0.2],
+    "epochs": 5,
+    "batch_size": 16,
+    "max_sentences": 15,
+    "max_words": 30
+  },
+  "results": [
+    {
+      "params": {"learning_rate": 0.002, "embedding_dim": 320, "hidden_dim": 96, "dropout": 0.2, "word_heads": 4, "sentence_heads": 4, "attention_dropout": 0.2},
+      "val_accuracy": 0.7422,
+      "test_accuracy": 0.7500,
+      "test_f1": 0.7170
+    },
+    {
+      "params": {"learning_rate": 0.002, "embedding_dim": 200, "hidden_dim": 64, "dropout": 0.4, "word_heads": 4, "sentence_heads": 4, "attention_dropout": 0.2},
+      "val_accuracy": 0.7344,
+      "test_accuracy": 0.6797,
+      "test_f1": 0.6486
+    },
+    {
+      "params": {"learning_rate": 0.002, "embedding_dim": 320, "hidden_dim": 96, "dropout": 0.4, "word_heads": 4, "sentence_heads": 4, "attention_dropout": 0.1},
+      "val_accuracy": 0.7266,
+      "test_accuracy": 0.6797,
+      "test_f1": 0.6336
+    },
+    {
+      "params": {"learning_rate": 0.001, "embedding_dim": 200, "hidden_dim": 64, "dropout": 0.2, "word_heads": 4, "sentence_heads": 4, "attention_dropout": 0.1},
+      "val_accuracy": 0.7188,
+      "test_accuracy": 0.7109,
+      "test_f1": 0.6424
+    },
+    {
+      "params": {"learning_rate": 0.001, "embedding_dim": 200, "hidden_dim": 64, "dropout": 0.2, "word_heads": 4, "sentence_heads": 4, "attention_dropout": 0.2},
+      "val_accuracy": 0.7109,
+      "test_accuracy": 0.7422,
+      "test_f1": 0.6471
+    }
+  ],
+  "best": {
+    "selection_metric": "val_accuracy",
+    "params": {"learning_rate": 0.002, "embedding_dim": 320, "hidden_dim": 96, "dropout": 0.2, "word_heads": 4, "sentence_heads": 4, "attention_dropout": 0.2},
+    "val_accuracy": 0.7422,
+    "test_accuracy": 0.7500,
+    "notes": "Chosen from grid search detailed in tuning_logs; retains stable F1 while delivering the top validation score."
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "search_space": {
+    "learning_rate": [0.001, 0.0005],
+    "embedding_dim": [128, 200, 500],
+    "hidden_dim": [32, 64, 128],
+    "dropout": [0.1, 0.3, 0.4],
+    "epochs": 5,
+    "batch_size": 16,
+    "max_sentences": 15,
+    "max_words": 30
+  },
+  "results": [
+    {
+      "params": {"learning_rate": 0.001, "embedding_dim": 500, "hidden_dim": 32, "dropout": 0.4},
+      "val_accuracy": 0.8438,
+      "test_accuracy": 0.8984,
+      "val_f1": 0.8200,
+      "test_f1": 0.8920
+    },
+    {
+      "params": {"learning_rate": 0.001, "embedding_dim": 200, "hidden_dim": 64, "dropout": 0.1},
+      "val_accuracy": 0.6953,
+      "test_accuracy": 0.7344,
+      "val_f1": 0.6850,
+      "test_f1": 0.7369
+    },
+    {
+      "params": {"learning_rate": 0.0005, "embedding_dim": 200, "hidden_dim": 64, "dropout": 0.3},
+      "val_accuracy": 0.6875,
+      "test_accuracy": 0.7891,
+      "val_f1": 0.6844,
+      "test_f1": 0.7983
+    },
+    {
+      "params": {"learning_rate": 0.001, "embedding_dim": 128, "hidden_dim": 128, "dropout": 0.1},
+      "val_accuracy": 0.6719,
+      "test_accuracy": 0.6797,
+      "val_f1": 0.6102,
+      "test_f1": 0.6675
+    },
+    {
+      "params": {"learning_rate": 0.0005, "embedding_dim": 128, "hidden_dim": 128, "dropout": 0.1},
+      "val_accuracy": 0.6562,
+      "test_accuracy": 0.7266,
+      "val_f1": 0.6457,
+      "test_f1": 0.7147
+    }
+  ],
+  "best": {
+    "selection_metric": "val_accuracy",
+    "params": {"learning_rate": 0.001, "embedding_dim": 500, "hidden_dim": 32, "dropout": 0.4},
+    "val_accuracy": 0.8438,
+    "test_accuracy": 0.8984,
+    "notes": "Extended grid identified higher-capacity embedding with stronger dropout as the most robust HAN configuration."
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "search_space": {
+    "ngram_range": [[1, 2]],
+    "max_features": [5000],
+    "min_df": [2],
+    "C": [0.1, 1.0, 10.0]
+  },
+  "results": [
+    {
+      "params": {"C": 0.1},
+      "val_accuracy": 0.8750,
+      "test_accuracy": 0.9000,
+      "test_precision": 0.8732,
+      "test_recall": 0.9538,
+      "test_f1": 0.9118
+    },
+    {
+      "params": {"C": 1.0},
+      "val_accuracy": 0.9000,
+      "test_accuracy": 0.8917,
+      "test_precision": 0.8939,
+      "test_recall": 0.9077,
+      "test_f1": 0.9008
+    },
+    {
+      "params": {"C": 10.0},
+      "val_accuracy": 0.8833,
+      "test_accuracy": 0.8833,
+      "test_precision": 0.8806,
+      "test_recall": 0.9077,
+      "test_f1": 0.8939
+    }
+  ],
+  "best": {
+    "selection_metric": "val_accuracy",
+    "params": {"C": 1.0},
+    "val_accuracy": 0.9000,
+    "test_accuracy": 0.8917,
+    "notes": "Chosen for highest validation accuracy with stable precision/recall trade-off."
+  }
+}

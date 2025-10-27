@@ -1,0 +1,84 @@
+{
+  "search_space": {
+    "embedding_dim": [128, 200],
+    "hidden_dim": [64, 128],
+    "dropout": [0.3],
+    "learning_rate": [0.001, 0.0005],
+    "epochs": 2,
+    "batch_size": 32,
+    "max_tokens": 150
+  },
+  "results": [
+    {
+      "params": {"embedding_dim": 200, "hidden_dim": 64, "dropout": 0.3, "learning_rate": 0.001},
+      "val_accuracy": 0.7318,
+      "test_accuracy": 0.7995,
+      "test_precision": 0.8079,
+      "test_recall": 0.8316,
+      "test_f1": 0.8188
+    },
+    {
+      "params": {"embedding_dim": 200, "hidden_dim": 64, "dropout": 0.3, "learning_rate": 0.0005},
+      "val_accuracy": 0.7318,
+      "test_accuracy": 0.7318,
+      "test_precision": 0.7819,
+      "test_recall": 0.7075,
+      "test_f1": 0.7420
+    },
+    {
+      "params": {"embedding_dim": 128, "hidden_dim": 64, "dropout": 0.3, "learning_rate": 0.001},
+      "val_accuracy": 0.7240,
+      "test_accuracy": 0.7500,
+      "test_precision": 0.7252,
+      "test_recall": 0.8790,
+      "test_f1": 0.7933
+    },
+    {
+      "params": {"embedding_dim": 128, "hidden_dim": 128, "dropout": 0.3, "learning_rate": 0.001},
+      "val_accuracy": 0.7031,
+      "test_accuracy": 0.7656,
+      "test_precision": 0.7823,
+      "test_recall": 0.7981,
+      "test_f1": 0.7880
+    },
+    {
+      "params": {"embedding_dim": 200, "hidden_dim": 128, "dropout": 0.3, "learning_rate": 0.0005},
+      "val_accuracy": 0.6953,
+      "test_accuracy": 0.6510,
+      "test_precision": 0.8236,
+      "test_recall": 0.4512,
+      "test_f1": 0.5767
+    },
+    {
+      "params": {"embedding_dim": 128, "hidden_dim": 64, "dropout": 0.3, "learning_rate": 0.0005},
+      "val_accuracy": 0.6823,
+      "test_accuracy": 0.7318,
+      "test_precision": 0.7425,
+      "test_recall": 0.7866,
+      "test_f1": 0.7620
+    },
+    {
+      "params": {"embedding_dim": 200, "hidden_dim": 128, "dropout": 0.3, "learning_rate": 0.001},
+      "val_accuracy": 0.6563,
+      "test_accuracy": 0.7813,
+      "test_precision": 0.7351,
+      "test_recall": 0.9526,
+      "test_f1": 0.8272
+    },
+    {
+      "params": {"embedding_dim": 128, "hidden_dim": 128, "dropout": 0.3, "learning_rate": 0.0005},
+      "val_accuracy": 0.6536,
+      "test_accuracy": 0.7161,
+      "test_precision": 0.6952,
+      "test_recall": 0.8620,
+      "test_f1": 0.7683
+    }
+  ],
+  "best": {
+    "selection_metric": "val_accuracy",
+    "params": {"embedding_dim": 200, "hidden_dim": 64, "dropout": 0.3, "learning_rate": 0.001},
+    "val_accuracy": 0.7318,
+    "test_accuracy": 0.7995,
+    "notes": "Selected for highest validation accuracy; provides balanced recall and precision."
+  }
+}
