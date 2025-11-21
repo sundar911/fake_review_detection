@@ -1,7 +1,5 @@
 # Fake Review Detection
 
-This project provides a clean, modular implementation of the fake-review classification experiments originally prototyped in the Jupyter notebook. Every model can now be executed from the command line with a single script, and the hyper-parameter sweeps that produced the chosen configurations are logged in `tuning_logs/`.
-
 ## Project Structure
 
 ```
