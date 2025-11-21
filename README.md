@@ -1,5 +1,9 @@
 # Fake Review Detection
 
+Researched and developed state of the art deep learning models using Python to detect fake reviews on e-commerce websites
+Implemented hierarchical attention neural networks on TripAdvisor reviews using PyTorch (Python) for text classification
+Validated best HAN configuration at 89.8% test accuracy beating baseline models
+
 ## Project Structure
 
 ```
